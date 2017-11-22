@@ -1,0 +1,12 @@
+version: "3.0"
+
+services:
+
+  httpd:
+    image: httpd:2.4.29
+    ports:
+      - 10080:80
+    volumes:
+      - ./conf:/usr/local/apache2/conf:ro
+      - ./logs:/usr/local/apache2/logs
+      - ./html:/var/www/html:ro
